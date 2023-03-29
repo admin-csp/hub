@@ -1,7 +1,7 @@
 
-# Hub
+# Hub 
 
-Esse projeto tem como objetivo fazer uma plataforma que possibilite os clientes fazer as integrações de forma automática para o nosso marketplace na VTEX. O projeto foi desenvolvido parcialmente e atualmente está rodando numa máquina virtual na AWS. Futuramente vai integrar demais ERPs, como Captare, Sankhya e outros.
+Esse projeto tem como objetivo fazer uma plataforma que possibilite os clientes fazer as integrações de forma automática para o nosso marketplace na VTEX. O projeto foi desenvolvido parcialmente e atualmente está rodando numa máquina virtual na AWS e consegue fazer compatibilidade com a Tray. Futuramente vai integrar demais ERPs, como Captare, Sankhya e outros.
 
 A url para acessar o lado do cliente:
 
@@ -34,6 +34,8 @@ Para entrar na plataforma, solicite ao Iago, Leonardo ou Hanna o usuário e o lo
 
 Ainda não foi possível baixar e fazer o debug, pois não temos a chave SSH de acesso ao terminal da instância no EC2 e essa chave só existe na hora da criação.
 
+#### Navegando dentro da instância da EC2
+
 Ao entrar na AWS EC2, a aplicação pode ser encontrada em diferentes lugares. Para acessar a instância, entre no AWS, busque pelo EC2. No dashboard, clique no "intances(running)". Quando aparecer as instâncias rodando, selecione a instância de nome "ubuntu_new". Já dentro da instância, clique no botão "connect" no canto superior direito. E depois clique em "connect" novamente. 
 
 
@@ -50,7 +52,7 @@ ls
 # README.md  action  docker  docs  prods-ant.xml  prods.xml  sql  src
 ```
 
-Dentro da pasta "src", você consegue encontrar as pastas com o backend da aplicação. Os códigos de ASP.NET e mais.
+Dentro da pasta "src", você consegue encontrar as pastas com o backend da aplicação. Os códigos de ASP.NET, RabbitMQ e mais.
 
 Se quiser ter mais informações sobre o frontend, digite o seguinte comando no terminal:
 
@@ -78,3 +80,11 @@ Se continuar investigando esse diretório, vai encontrar informações sobre o g
 **OS da instância:** Ubuntu.
 
 No deploy na máquina virtual da AWS, foi utizado docker tanto para o banco de dados quanto para o RabbitMQ, mas o resto da aplicação está usando a VM como um todo como servidor.
+## Funcionalidades
+- Adicionar produto
+- Pesquisar por produtos
+- Integração de produtos com a VTEX
+- Integração de pedidos com a VTEX
+- Visualização das operações anteriores
+- Sistema de notificação de novas vendas
+
