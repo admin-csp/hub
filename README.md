@@ -3,6 +3,37 @@
 
 Esse projeto tem como objetivo fazer uma plataforma que possibilite os clientes fazer as integrações de forma automática para o nosso marketplace na VTEX. O projeto foi desenvolvido parcialmente e atualmente está rodando numa máquina virtual na AWS e consegue fazer compatibilidade com a Tray. Futuramente vai integrar demais ERPs, como Captare, Sankhya e outros.
 
+
+## Funcionalidades
+- Adicionar produto
+
+- Pesquisar por produtos
+
+- Integração de produtos com a VTEX
+
+- Integração de pedidos com a VTEX
+
+- Visualização das operações anteriores
+
+- Sistema de notificação de novas vendas
+
+
+## Stack utilizada
+
+**Front-end:** Angular dentro do gerenciador de UI Vex.
+
+**Back-end:** ASP.NET, JQuery, RabbitMQ.
+
+**Database:** Postgress.
+
+**Linguagem Principal:** C#.
+
+**OS da instância:** Ubuntu.
+
+No deploy na máquina virtual da AWS, foi utizado docker tanto para o banco de dados quanto para o RabbitMQ, mas o resto da aplicação está usando a VM como um todo como servidor.
+
+## Demonstração
+
 A url para acessar o lado do cliente:
 
 - https://cliente.compresuapeca.com.br/
@@ -34,7 +65,7 @@ Para entrar na plataforma, solicite ao Iago, Leonardo ou Hanna o usuário e o lo
 
 Ainda não foi possível baixar e fazer o debug, pois não temos a chave SSH de acesso ao terminal da instância no EC2 e essa chave só existe na hora da criação.
 
-#### Navegando dentro da instância da EC2
+## Navegando dentro da instância da EC2
 
 Ao entrar na AWS EC2, a aplicação pode ser encontrada em diferentes lugares. Para acessar a instância, entre no AWS, busque pelo EC2. No dashboard, clique no "intances(running)". Quando aparecer as instâncias rodando, selecione a instância de nome "ubuntu_new". Já dentro da instância, clique no botão "connect" no canto superior direito. E depois clique em "connect" novamente. 
 
@@ -79,33 +110,6 @@ sudo docker ps -a
 8bd518f6f905   postgres                "docker-entrypoint.s…"   7 weeks ago   Up 2 weeks   0.0.0.0:5935->5432/tcp, :::5935->5432/tcp                                                                                                             postgres.rpaPecas
 fb0b5de4ac58   rabbitmq:3-management   "docker-entrypoint.s…"   7 weeks ago   Up 2 weeks   4369/tcp, 5671/tcp, 15671/tcp, 15691-15692/tcp, 25672/tcp, 0.0.0.0:5673->5672/tcp, :::5673->5672/tcp, 0.0.0.0:15673->15672/tcp, :::15673->15672/tcp   csp.rabbitmq
 ```
-## Stack utilizada
-
-**Front-end:** Angular dentro do gerenciador de UI Vex.
-
-**Back-end:** ASP.NET, JQuery, RabbitMQ.
-
-**Database:** Postgress.
-
-**Linguagem Principal:** C#.
-
-**OS da instância:** Ubuntu.
-
-No deploy na máquina virtual da AWS, foi utizado docker tanto para o banco de dados quanto para o RabbitMQ, mas o resto da aplicação está usando a VM como um todo como servidor.
-## Funcionalidades
-- Adicionar produto
-
-- Pesquisar por produtos
-
-- Integração de produtos com a VTEX
-
-- Integração de pedidos com a VTEX
-
-- Visualização das operações anteriores
-
-- Sistema de notificação de novas vendas
-
-
 ## Melhorias
 
 - Corrigir falhar na integração com a Tray e VTEX
