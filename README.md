@@ -100,3 +100,18 @@ No deploy na máquina virtual da AWS, foi utizado docker tanto para o banco de d
 - Visualização das operações anteriores
 - Sistema de notificação de novas vendas
 
+
+## Roadmap
+
+- Corrigir falhar na integração
+
+- Melhorar documentação do código
+
+- Expandir para abarcar mais ERPs
+
+- Repensar o UI/UX da plataforma(Tem informações como agenda e clima que não fazem sentido para a nossa aplicação)
+
+- Corrigir o erro do lado do admin. Após logar, o site da o erro 502 Gateway
+
+- Revisar a necessidade de uma VM talvez contanerizar a aplicação e rodar no modelo de microserviços seja melhor e mais escalável
+
