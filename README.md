@@ -94,16 +94,21 @@ fb0b5de4ac58   rabbitmq:3-management   "docker-entrypoint.s…"   7 weeks ago   
 No deploy na máquina virtual da AWS, foi utizado docker tanto para o banco de dados quanto para o RabbitMQ, mas o resto da aplicação está usando a VM como um todo como servidor.
 ## Funcionalidades
 - Adicionar produto
+
 - Pesquisar por produtos
+
 - Integração de produtos com a VTEX
+
 - Integração de pedidos com a VTEX
+
 - Visualização das operações anteriores
+
 - Sistema de notificação de novas vendas
 
 
-## Roadmap
+## Melhorias
 
-- Corrigir falhar na integração
+- Corrigir falhar na integração com a Tray e VTEX
 
 - Melhorar documentação do código
 
