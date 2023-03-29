@@ -66,7 +66,19 @@ ls
 
 Se continuar investigando esse diretório, vai encontrar informações sobre o gerenciador de design Vex que utiliza Angular.JS. 
 
+#### Containers Ativos
 
+Existem dois containers ativos rodando na VM. Um deles contém o banco de dados postgres com o nome "postgres.rpaPecas". O segundo container contém uma instância do rabbitMQ com o nome "csp.rabbitmq". Logo:
+
+```bash
+# Quando rodamos o seguinte comando:
+sudo docker ps -a
+
+# Obtemos o seguinte output: 
+#                                                                      NAMES
+8bd518f6f905   postgres                "docker-entrypoint.s…"   7 weeks ago   Up 2 weeks   0.0.0.0:5935->5432/tcp, :::5935->5432/tcp                                                                                                             postgres.rpaPecas
+fb0b5de4ac58   rabbitmq:3-management   "docker-entrypoint.s…"   7 weeks ago   Up 2 weeks   4369/tcp, 5671/tcp, 15671/tcp, 15691-15692/tcp, 25672/tcp, 0.0.0.0:5673->5672/tcp, :::5673->5672/tcp, 0.0.0.0:15673->15672/tcp, :::15673->15672/tcp   csp.rabbitmq
+```
 ## Stack utilizada
 
 **Front-end:** Angular dentro do gerenciador de UI Vex.
