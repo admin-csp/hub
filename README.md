@@ -1,11 +1,9 @@
 
 # Hub
 
-Esse projeto tem como objetivo fazer uma plataforma que possibilite os clientes fazer as integrações de forma automática para a VTEX.
+Esse projeto tem como objetivo fazer uma plataforma que possibilite os clientes fazer as integrações de forma automática para o nosso marketplace na VTEX. O projeto foi desenvolvido parcialmente e atualmente está rodando numa máquina virtual na AWS. Futuramente vai integrar demais ERPs, como Captare, Sankhya e outros.
 
-O projeto foi desenvolvido e atualmente está rodando numa máquina virtual na AWS.
-
-O link que vai ser acessado pelo cliente é:
+A url para acessar o lado do cliente:
 
 - https://cliente.compresuapeca.com.br/
 
@@ -36,7 +34,37 @@ Para entrar na plataforma, solicite ao Iago, Leonardo ou Hanna o usuário e o lo
 
 Ainda não foi possível baixar e fazer o debug, pois não temos a chave SSH de acesso ao terminal da instância no EC2 e essa chave só existe na hora da criação.
 
-Ao entrar na AWS EC2, a aplicação pode ser encontrada em diferentes lugares. 
+Ao entrar na AWS EC2, a aplicação pode ser encontrada em diferentes lugares. Para acessar a instância, entre no AWS, busque pelo EC2. No dashboard, clique no "intances(running)". Quando aparecer as instâncias rodando, selecione a instância de nome "ubuntu_new". Já dentro da instância, clique no botão "connect" no canto superior direito. E depois clique em "connect" novamente. 
+
+
+ Para encontrar os arquivos do backend: 
+
+```bash
+cd /home/dev/net7/Coja.IDP
+```
+
+Ao rodar o comando: 
+```bash
+ls
+# Deve ter o seguinte resultado: 
+# README.md  action  docker  docs  prods-ant.xml  prods.xml  sql  src
+```
+
+Dentro da pasta "src", você consegue encontrar as pastas com o backend da aplicação. Os códigos de ASP.NET e mais.
+
+Se quiser ter mais informações sobre o frontend, digite o seguinte comando no terminal:
+
+```bash
+cd /var/www
+# Ao dar um ls
+ls
+# Deve ter a seguinte saída: 
+# cliente.compresuapeca.com.br  csp-idp  csp-web  dump_23-03-2023_02_59_32.sql
+```
+
+Se continuar investigando esse diretório, vai encontrar informações sobre o gerenciador de design Vex que utiliza Angular.JS. 
+
+
 ## Stack utilizada
 
 **Front-end:** Angular dentro do gerenciador de UI Vex.
