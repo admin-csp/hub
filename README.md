@@ -1,2 +1,2 @@
-# HUB
+# hub
 Possui informações relacionadas a funções de integrações com plataformas e ERPs. Ex: Tray, Captare, Sankhya...
